@@ -28,7 +28,7 @@ gulp.task('build-system', function() {
     .pipe(sourcemaps.init({loadMaps: true}))
    // .pipe(to5(assign({}, compilerOptions, {modules: 'system'})))
     .pipe(typescript(typescriptCompiler))
-    .pipe(sourcemaps.write({includeContent: true,sourceRoot: '/src'}))
+    .pipe(sourcemaps.write({includeContent: true}))
     .pipe(gulp.dest(paths.output));
 
   // return gulp.src(paths.dtsSrc.concat(paths.source))
